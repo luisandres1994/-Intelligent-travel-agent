@@ -27,55 +27,64 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jRadioButton17" min="-2" max="-2" attributes="0"/>
+                  <Component id="hotel" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jRadioButton4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ciudad" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campo" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="playa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="montaña" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton11" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tren" min="-2" max="-2" attributes="0"/>
+                                  <Component id="avion" min="-2" max="-2" attributes="0"/>
+                                  <Component id="carro" min="-2" max="-2" attributes="0"/>
+                                  <Component id="vegetariana" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="gourmet" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="criolla" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jRadioButton5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="selva" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton16" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton13" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton14" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton15" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="posada" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pareja" min="-2" max="-2" attributes="0"/>
+                                  <Component id="solo" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="grupo" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="familia" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jRadioButton23" min="-2" max="-2" attributes="0"/>
+                      <Component id="excursion" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton18" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton22" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton21" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton20" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton19" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton25" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton24" min="-2" max="-2" attributes="0"/>
+                          <Component id="escalada" min="-2" max="-2" attributes="0"/>
+                          <Component id="moto_acuatica" min="-2" max="-2" attributes="0"/>
+                          <Component id="ski_acuatico" min="-2" max="-2" attributes="0"/>
+                          <Component id="masajes" min="-2" max="-2" attributes="0"/>
+                          <Component id="yoga" min="-2" max="-2" attributes="0"/>
+                          <Component id="visitas" min="-2" max="-2" attributes="0"/>
+                          <Component id="bici_patines" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -91,74 +100,76 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="montaña" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jRadioButton6" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton15" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="tren" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="solo" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jRadioButton23" min="-2" max="-2" attributes="0"/>
+                  <Component id="excursion" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioButton2" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton8" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton14" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton18" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="playa" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="avion" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="pareja" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="escalada" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton13" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="campo" min="-2" max="-2" attributes="0"/>
+                  <Component id="carro" min="-2" max="-2" attributes="0"/>
+                  <Component id="moto_acuatica" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="grupo" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioButton21" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="ski_acuatico" min="-2" max="-2" attributes="0"/>
+                      <Component id="ciudad" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="familia" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="16" max="32767" attributes="0"/>
+              <EmptySpace min="16" pref="2" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton20" min="-2" max="-2" attributes="0"/>
+                  <Component id="selva" min="-2" max="-2" attributes="0"/>
+                  <Component id="masajes" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jRadioButton19" min="-2" max="-2" attributes="0"/>
+                      <Component id="yoga" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+                      <Component id="vegetariana" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jRadioButton11" min="-2" max="-2" attributes="0"/>
+                          <Component id="gourmet" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jRadioButton25" min="-2" max="-2" attributes="0"/>
+                              <Component id="visitas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                              <Component id="criolla" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jRadioButton24" min="-2" max="-2" attributes="0"/>
+                              <Component id="bici_patines" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jRadioButton17" min="-2" max="-2" attributes="0"/>
+                      <Component id="hotel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jRadioButton16" min="-2" max="-2" attributes="0"/>
+                      <Component id="posada" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -167,55 +178,170 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="monta&#xf1;a">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="playa">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+    <Component class="javax.swing.JRadioButton" name="campo">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+    <Component class="javax.swing.JRadioButton" name="ciudad">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+    <Component class="javax.swing.JRadioButton" name="selva">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+    <Component class="javax.swing.JRadioButton" name="tren">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+    <Component class="javax.swing.JRadioButton" name="carro">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+    <Component class="javax.swing.JRadioButton" name="avion">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+    <Component class="javax.swing.JRadioButton" name="criolla">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+    <Component class="javax.swing.JRadioButton" name="vegetariana">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+    <Component class="javax.swing.JRadioButton" name="gourmet">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+    <Component class="javax.swing.JRadioButton" name="pareja">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+    <Component class="javax.swing.JRadioButton" name="solo">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton14">
+    <Component class="javax.swing.JRadioButton" name="posada">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton15">
+    <Component class="javax.swing.JRadioButton" name="hotel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton16">
+    <Component class="javax.swing.JRadioButton" name="escalada">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton17">
+    <Component class="javax.swing.JRadioButton" name="yoga">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton18">
+    <Component class="javax.swing.JRadioButton" name="masajes">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton19">
+    <Component class="javax.swing.JRadioButton" name="ski_acuatico">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton20">
+    <Component class="javax.swing.JRadioButton" name="moto_acuatica">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton21">
+    <Component class="javax.swing.JRadioButton" name="excursion">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton22">
+    <Component class="javax.swing.JRadioButton" name="bici_patines">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton23">
+    <Component class="javax.swing.JRadioButton" name="visitas">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton24">
+    <Component class="javax.swing.JSpinner" name="grupo">
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton25">
+    <Component class="javax.swing.JSpinner" name="familia">
     </Component>
   </SubComponents>
 </Form>
