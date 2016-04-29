@@ -28,48 +28,37 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="hotel" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ciudad" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="selva" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ciudad" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="selva" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="playa" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="montaña" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Play" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <Component id="campo" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="tren" min="-2" max="-2" attributes="0"/>
-                                          <Component id="avion" min="-2" max="-2" attributes="0"/>
-                                          <Component id="carro" min="-2" max="-2" attributes="0"/>
-                                          <Component id="vegetariana" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="gourmet" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="criolla" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="playa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="montaña" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Play" min="-2" pref="125" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="posada" min="-2" max="-2" attributes="0"/>
-                                          <Component id="pareja" min="-2" max="-2" attributes="0"/>
-                                          <Component id="solo" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="grupo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="familia" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="avion" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tren" min="-2" max="-2" attributes="0"/>
+                                  <Component id="carro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="vegetariana" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="gourmet" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="criolla" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="solo" min="-2" max="-2" attributes="0"/>
+                          <Component id="pareja" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="hotel" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="familia" min="-2" max="-2" attributes="0"/>
+                              <Component id="grupo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="posada" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -93,7 +82,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="6" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="excursion" min="-2" max="-2" attributes="0"/>
@@ -118,19 +107,23 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
                           <Component id="montaña" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="tren" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="solo" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="excursion" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="solo" min="-2" max="-2" attributes="0"/>
+                          <Component id="excursion" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="1" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="playa" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="avion" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -142,7 +135,7 @@
                   <Component id="campo" min="-2" max="-2" attributes="0"/>
                   <Component id="carro" min="-2" max="-2" attributes="0"/>
                   <Component id="moto_acuatica" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="grupo" min="-2" max="-2" attributes="0"/>
+                  <Component id="grupo" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
@@ -152,18 +145,13 @@
                   </Group>
                   <Component id="familia" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="16" max="32767" attributes="0"/>
+              <EmptySpace min="16" pref="6" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="selva" min="-2" max="-2" attributes="0"/>
                   <Component id="masajes" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="vegetariana" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -172,46 +160,53 @@
                           </Group>
                           <Component id="yoga" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="precio_act" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="vegetariana" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="precio_act" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="hotel" min="-2" max="-2" attributes="0"/>
+                  <Component id="gourmet" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="gourmet" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="visitas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Component id="visitas" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="precio_act1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="bici_patines" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="criolla" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="precio_act1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="criolla" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="bici_patines" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="Play" min="-2" pref="40" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="posada" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="hotel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="posada" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="Play" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
