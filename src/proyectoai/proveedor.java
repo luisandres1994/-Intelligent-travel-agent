@@ -16,10 +16,15 @@ import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.proto.ContractNetResponder;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Vector;
  
 public class proveedor  extends Agent {
     
     private  Object[] args;
+    private Vector vector=new Vector(20, 5);
    
     protected void setup() {
           args = this.getArguments();
@@ -69,15 +74,12 @@ public class proveedor  extends Agent {
         }
  
         protected ACLMessage prepareResponse(ACLMessage cfp) throws NotUnderstoodException, RefuseException {
-            System.out.printf("Autos %s: Peticion de oferta recibida de %s.\n", this.myAgent.getLocalName(), cfp.getSender().getLocalName());
- 
-            //Comprobamos si existen ofertas disponibles
-            if (proveedor.this.existeCoche()) {
-                //Proporcionamos la información necesaria
+            
+            if (proveedor.this.leerarchivo()) {
                 int precio = proveedor.this.obtenerPrecio();
                 System.out.printf("Autos %s: Preparando oferta (%d euros).\n", this.myAgent.getLocalName(), precio);
  
-                //Se crea el mensaje
+               
                 ACLMessage oferta = cfp.createReply();
                 oferta.setPerformative(ACLMessage.PROPOSE);
                 oferta.setContent(String.valueOf(precio));
@@ -111,5 +113,37 @@ public class proveedor  extends Agent {
         }
     }
     
+    
+   private boolean leerarchivo()
+   {
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        try {
+         
+         archivo = new File ("/transporte.txt");
+         fr = new FileReader (archivo);
+         br = new BufferedReader(fr);
+
+         String linea;
+         while((linea=br.readLine())!=null)
+            vector.add(linea);
+      }
+      catch(Exception e){
+         e.printStackTrace();
+         return false;
+      }finally{
+         try{                    
+            if( null != fr ){   
+               fr.close();     
+            }                  
+         }catch (Exception e2){ 
+            e2.printStackTrace();
+         }
+      }
+      
+        return true;
+       
+   }
     
 }
