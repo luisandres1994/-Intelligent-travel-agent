@@ -92,7 +92,6 @@ public class preferencias extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
