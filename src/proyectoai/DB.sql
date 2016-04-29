@@ -30,7 +30,7 @@ CREATE TABLE alojamiento
 	id NUMBER PRIMARY KEY,
 	tipo VARCHAR(21),
 	precio FLOAT,
-	destino VARCHAR(21),
+	ciudad VARCHAR(21),
 	nombre VARCHAR(101),
         cant_perso NUMBER
 );
@@ -38,9 +38,9 @@ CREATE TABLE alojamiento
 CREATE TABLE turista
 (
 	cod number PRIMARY KEY,
-	tipo VARCHAR(21),
-	precio float,
 	destino VARCHAR(21),
+	precio float,
+	ciudad VARCHAR(21),
 	actividades VARCHAR(101),
 	comida VARCHAR(30),
 );

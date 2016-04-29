@@ -22,6 +22,7 @@ public class Agenteturistico extends Agent {
     public int precionMaximo;
     interfas I;
     Object[] args;
+    Vector propuestas=new Vector(3,1);
     public String donde,Como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
        
@@ -101,22 +102,11 @@ public class Agenteturistico extends Agent {
         }
  
         
-        //Manejador de rechazos de proposiciones.
-        protected void handleRefuse(ACLMessage rechazo) {
-            System.out.printf("%s: Autos %s no tiene coches que ofrecer.\n",
-                this.myAgent.getLocalName(), rechazo.getSender().getLocalName());
-        }
+        
  
         //Manejador de respuestas de fallo.
         protected void handleFailure(ACLMessage fallo) {
-            if (fallo.getSender().equals(myAgent.getAMS())) {
- 
-        //Esta notificacion viene del entorno de ejecución JADE (no existe el receptor)
-                System.out.println("AMS: Esta venta de autos no existe o no es accesible");
-            } else {
-                System.out.printf("%s: Autos %s ha sufrido un fallo.\n",
-                    this.myAgent.getLocalName(), fallo.getSender().getLocalName());
-            }
+            
             //Falló, por lo tanto, no recibiremos respuesta desde ese agente
             Agenteturistico.this.numeroDeOfertas--;
         }
@@ -124,12 +114,24 @@ public class Agenteturistico extends Agent {
         //Método colectivo llamado tras finalizar el tiempo de espera o recibir todas las propuestas.
         protected void handleAllResponses(Vector respuestas, Vector aceptados) {
  
-        //Se comprueba si una venta de autos se pasó del plazo de envío de ofertas.
+        //Se comprueba si una oferta se paso del plazo
             if (respuestas.size() < numeroDeOfertas) {
-                System.out.printf("%s: %d ventas de autos llegan tarde.\n",
-                    this.myAgent.getLocalName(), Agenteturistico.this.numeroDeOfertas - respuestas.size());
+                System.out.printf("las ofertas llegan tarde.\n");
             }
- 
+            
+            
+            
+            //aqui se recibe las propuestas de un proveedor, se separan para luego armar las ofertas a mostrar
+            for(Object resp:respuestas)
+            {
+                ACLMessage mensaje=(ACLMessage) resp;
+                if (mensaje.getPerformative() == ACLMessage.PROPOSE){
+                    ACLMessage respuesta=mensaje.createReply();
+                    
+                }
+            }
+            
+            
             //Escogemos la mejor oferta
             int mejorOferta = Integer.MAX_VALUE;
             AID mejorAutos = null;
@@ -151,20 +153,14 @@ public class Agenteturistico extends Agent {
                     }
                 }
             }
- 
+            
             //Si hay una oferta aceptada se modifica su performativa.
             if (aceptado != null) {
-                System.out.printf("%s: Decidido!!! Compro el coche de Autos %s\n",
-                    this.myAgent.getLocalName(), mejorAutos.getLocalName());
                 aceptado.setPerformative(ACLMessage.ACCEPT_PROPOSAL);
             }
         }
  
-        //Manejador de los mensajes inform.
-        protected void handleInform(ACLMessage inform) {
-            System.out.printf("%s: Autos %s te ha enviado el  contrato.\n",
-                this.myAgent.getLocalName(), inform.getSender().getName());
-        }
+        
     }
     }
 

@@ -32,12 +32,11 @@ import java.util.logging.Logger;
 public class proveedor  extends Agent {
     
     private  Object[] args;
-    private Vector vector=new Vector(20, 5);
    private static Connection con;
    
    private static ResultSet rset;
-    private static Statement stmt,stmt1;
-    int id_dim;
+    private static Statement stmt;
+    
     String query;
     protected void setup() {
           args = this.getArguments();
@@ -78,8 +77,8 @@ public class proveedor  extends Agent {
         return (int) (Math.random() * 22000) + 8000;
     }
  
-    // Simula fallos en el cálculo de precios.
-    private boolean devolverPrecio() {
+    // Simula fallos en la entrega de ofertas
+    private boolean devolveroferta() {
         return (int) (Math.random() * 10) > 1;
     }
  
@@ -90,7 +89,8 @@ public class proveedor  extends Agent {
  
         protected ACLMessage prepareResponse(ACLMessage cfp) throws NotUnderstoodException, RefuseException {
                 
-            
+                boolean encontro=true;
+                query="";
                 //levantamos la base de datos ORACLE
                  try {
                         loadDB();
@@ -113,73 +113,72 @@ public class proveedor  extends Agent {
                 for(i=0; i<select.length; i++)
                     query=query+(String)args[0]+"."+select[i]+", ";
                 query+=(String)args[0]+".precio from "+(String)args[0]+" where ";
+                
+                String aux=query;
                 for(i=0; i<where.length-1; i++)
+                {
+                    /*try {
+                        stmt = con.createStatement();
+                        rset= stmt.executeQuery(query);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    }*/
+                    
+                    //if(!rset.next())encontro =false;
                     query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
+                    
+                }
                 query+=(String)args[0]+"."+select[i]+"="+where[i]+"; ";
-                System.out.println(query);
                 
+               
                 
-                
+        
+                if(encontro)
+                {
                 ACLMessage oferta = cfp.createReply();
                 oferta.setPerformative(ACLMessage.PROPOSE);
                 oferta.setContent(String.valueOf(proveedor.this.obtenerPrecio()));
-                return oferta;
-            
+                    return oferta;
+                }else
+                {
+                    //Si no hay ofertas disponibles rechazamos el propose
+                throw new RefuseException("Fallo la solicitud.");
+                }
         }
  
         protected ACLMessage prepareResultNotification(ACLMessage cfp, ACLMessage propose, ACLMessage accept) throws FailureException {
-            //Hemos recibido una aceptación de nuestra oferta, enviamos el albarán
-            System.out.printf("Autos %s: Hay una posible oferta.\n", this.myAgent.getLocalName());
- 
-            if (devolverPrecio()) {
-                System.out.printf("Autos %s: Enviando contrato de compra.\n", this.myAgent.getLocalName());
+            //Hemos recibido una aceptación de nuestra oferta, enviamos los resultados
+            
+                String res="";
+            if (devolveroferta()) {
+                
+                /*try {
+                    stmt = con.createStatement();
+                    rset= stmt.executeQuery(query);
+                while(rset.next()) res+=rset.toString()+"/ ";
+                } catch (SQLException ex) {
+                    Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                }*/
+     
  
                 ACLMessage inform = accept.createReply();
                 inform.setPerformative(ACLMessage.INFORM);
+                inform.setContent(res);
                 return inform;
+                
             } else {
-                System.out.printf("Autos %s: Vaya!, ha fallado al enviar el contrato.\n", this.myAgent.getLocalName());
+                //algun error enviando informe de resultados
                 throw new FailureException("Error al enviar contrato.");
             }
         }
  
         protected void handleRejectProposal(ACLMessage cfp, ACLMessage propose, ACLMessage reject) {
-            //Nuestra oferta por el coche ha sido rechazada
-            System.out.printf("Autos %s: Oferta rechazada por su excesivo precio.\n", this.myAgent.getLocalName());
+            
+            
         }
     }
     
     
-   private boolean leerarchivo()
-   {
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        try {
-         
-         archivo = new File ("/transporte.txt");
-         fr = new FileReader (archivo);
-         br = new BufferedReader(fr);
-
-         String linea;
-         while((linea=br.readLine())!=null)
-            vector.add(linea);
-      }
-      catch(Exception e){
-         e.printStackTrace();
-         return false;
-      }finally{
-         try{                    
-            if( null != fr ){   
-               fr.close();     
-            }                  
-         }catch (Exception e2){ 
-            e2.printStackTrace();
-         }
-      }
-      
-        return true;
-       
-   }
+   
     
 }
