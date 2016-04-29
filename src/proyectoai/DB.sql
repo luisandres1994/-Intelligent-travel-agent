@@ -34,7 +34,8 @@ CREATE TABLE alojamiento
         tipo_destino VARCHAR(21),
 	destino VARCHAR(21),
 	nombre VARCHAR(101),
-        cant_perso NUMBER
+        cant_perso NUMBER,
+        comida VARCHAR(21)
 );
 
 CREATE TABLE turista
