@@ -21,7 +21,13 @@ public class interfas extends javax.swing.JFrame {
         a=ag;
         
         initComponents();
-      
+        this.setSize(978, 725);
+        this.setTitle("Agente Turistico");
+        JLabel fondo=new JLabel();
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfaz_preferencias.jpg")));
+        fondo.setFocusable(false);
+        fondo.setSize(this.getSize());
+        this.add(fondo);
         
         this.setVisible(true);
     }
@@ -41,7 +47,7 @@ public class interfas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Agente Turistico");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -53,16 +59,16 @@ public class interfas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(143, 143, 143)
+                .addGap(160, 160, 160)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(123, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addGap(104, 104, 104))
         );
 
         pack();

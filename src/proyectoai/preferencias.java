@@ -18,7 +18,7 @@ public class preferencias extends javax.swing.JFrame {
     public preferencias(Agenteturistico ag) {
         a=ag;
         initComponents();
-        
+        //Definir el aspecto de la interfaz
         this.setSize(978, 725);
         this.setTitle("Agente Turistico");
         JLabel fondo=new JLabel();
@@ -27,7 +27,10 @@ public class preferencias extends javax.swing.JFrame {
         fondo.setSize(this.getSize());
         this.add(fondo);
         this.setVisible(true);
+       
+        //Se declaran los ButtonGroup para que el cliente no seleccione multiples opciones
         
+        //Grupon lugar
         ButtonGroup grupo_donde= new ButtonGroup();
         grupo_donde.add(montaña);
         grupo_donde.add(playa);
@@ -35,18 +38,23 @@ public class preferencias extends javax.swing.JFrame {
         grupo_donde.add(ciudad);
         grupo_donde.add(selva);
         
+        //Grupo medio de transporte
         ButtonGroup grupo_como= new ButtonGroup();
         grupo_como.add(tren);
         grupo_como.add(avion);
         grupo_como.add(carro);
 
+        //Grupo hospedaje
         ButtonGroup grupo_hospedaje= new ButtonGroup();
         grupo_hospedaje.add(hotel);
         grupo_hospedaje.add(posada);   
         
+        //Grupo Cantidad de personas
         ButtonGroup grupo_personas= new ButtonGroup();
         grupo_personas.add(solo);
         grupo_personas.add(pareja);
+        
+        //Las demas columnas: actividades y comidas no se agrupan ya que el cliente puede elegir mas de una opcion
 
     }
 
