@@ -19,10 +19,11 @@ CONNECT AGENTE/123456;
 CREATE TABLE transporte
 (
 	id NUMBER PRIMARY KEY,
-	tipo VARCHAR(21),
+	descripcion VARCHAR(101),
 	precio FLOAT,
 	destino VARCHAR(21),
-	descripcion VARCHAR(101)
+        cant_perso NUMBER,
+	tipo VARCHAR(21)
 );
 
 CREATE TABLE alojamiento
@@ -30,6 +31,7 @@ CREATE TABLE alojamiento
 	id NUMBER PRIMARY KEY,
 	tipo VARCHAR(21),
 	precio FLOAT,
+        tipo_destino VARCHAR(21),
 	destino VARCHAR(21),
 	nombre VARCHAR(101),
         cant_perso NUMBER
@@ -38,11 +40,9 @@ CREATE TABLE alojamiento
 CREATE TABLE turista
 (
 	cod number PRIMARY KEY,
-	tipo VARCHAR(21),
 	precio float,
 	destino VARCHAR(21),
 	actividades VARCHAR(101),
-	comida VARCHAR(30),
-	costos float
+	cant_perso NUMBER
 );
 
