@@ -16,14 +16,16 @@ public class preferencias extends javax.swing.JFrame {
     Agenteturistico a;
     public preferencias(Agenteturistico ag) {
         a=ag;
+        initComponents();
+        
         this.setSize(750, 580);
         this.setTitle("Agente Turistico");
         JLabel fondo=new JLabel();
-        fondo.setIcon(new javax.swing.ImageIcon("\\src\\img\\interfaz_preferencias.jpg"));
+        fondo.setIcon(new javax.swing.ImageIcon("F:\\Documentos\\NetBeansProjects\\proyectoai\\src\\imagenes\\interfaz_preferencias.jpg"));
         fondo.setFocusable(false);
-        fondo.setSize(this.getSize());
-        
-        add(fondo);
+        fondo.setSize(750,580);
+        this.jPanel1.add(fondo);
+        this.setVisible(true);
    
     }
 
@@ -65,35 +67,6 @@ public class preferencias extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(preferencias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(preferencias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(preferencias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(preferencias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
