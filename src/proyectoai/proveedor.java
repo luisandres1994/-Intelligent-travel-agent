@@ -83,7 +83,9 @@ public class proveedor  extends Agent {
                 ACLMessage oferta = cfp.createReply();
                 oferta.setPerformative(ACLMessage.PROPOSE);
                 oferta.setContent(String.valueOf(precio));
+                System.out.println(cfp.getContent());
                 return oferta;
+                
             } else {
                 //Si no hay ofertas disponibles rechazamos el propose
                 System.out.printf("Autos %s: No tenemos ofertas disponibles.\n", this.myAgent.getLocalName());

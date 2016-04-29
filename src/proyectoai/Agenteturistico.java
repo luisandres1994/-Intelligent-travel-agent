@@ -22,10 +22,10 @@ public class Agenteturistico extends Agent {
     //Precio máximo que se pagará por un coche.
     public int precionMaximo;
     preferencias I;
- 
+    Object[] args;
     protected void setup() {
         //El precio máximo se recibirá como argumento de entrada.
-        Object[] args = this.getArguments();
+       args = this.getArguments();
         I=new preferencias(this);
         
         
@@ -42,9 +42,8 @@ public class Agenteturistico extends Agent {
 
             //Búsqueda del servicio de venta de coches en las páginas amarillas.
             ServiceDescription servicio = new ServiceDescription();
-            servicio.setType("Autos");
-            servicio.setName("Venta de coches");
- 
+            servicio.setType((String) args[0]);
+            servicio.setName("Venta de "+(String) args[0]);
             DFAgentDescription descripcion = new DFAgentDescription();
             descripcion.addLanguages("Español");
             descripcion.addServices(servicio);
