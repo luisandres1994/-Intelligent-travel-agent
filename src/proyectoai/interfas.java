@@ -5,6 +5,8 @@
  */
 package proyectoai;
 import jade.core.Agent;
+import javax.swing.Icon;
+import javax.swing.JLabel;
 /**
  *
  * @author Usuario
@@ -17,7 +19,10 @@ public class interfas extends javax.swing.JFrame {
     Agenteturistico a;
     public interfas(Agenteturistico ag) {
         a=ag;
+        
         initComponents();
+      
+        
         this.setVisible(true);
     }
 
@@ -48,16 +53,16 @@ public class interfas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jButton1)
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addGap(143, 143, 143)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(197, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(jButton1)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addGap(95, 95, 95)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         pack();
