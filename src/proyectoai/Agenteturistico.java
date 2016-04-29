@@ -162,7 +162,7 @@ public class Agenteturistico extends Agent {
  
         //Manejador de los mensajes inform.
         protected void handleInform(ACLMessage inform) {
-            System.out.printf("%s: Autos %s te ha enviado el contrato.\n",
+            System.out.printf("%s: Autos %s te ha enviado el  contrato.\n",
                 this.myAgent.getLocalName(), inform.getSender().getName());
         }
     }
