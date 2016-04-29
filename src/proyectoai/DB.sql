@@ -34,15 +34,14 @@ CREATE TABLE alojamiento
         cant_perso NUMBER
 );
 
-CREATE TABLE infor_turistica
+CREATE TABLE turista
 (
-
-	id NUMBER PRIMARY KEY,
+	cod number PRIMARY KEY,
 	tipo VARCHAR(21),
-	precio FLOAT,
+	precio float,
 	destino VARCHAR(21),
-	actvidades VARCHAR(101),
+	actividades VARCHAR(101),
 	comida VARCHAR(30),
-	costos FLOAT
+	costos float
 );
 
