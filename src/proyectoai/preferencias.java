@@ -79,6 +79,12 @@ public class preferencias extends javax.swing.JFrame {
         visitas = new javax.swing.JRadioButton();
         grupo = new javax.swing.JSpinner();
         familia = new javax.swing.JSpinner();
+        jLabel1 = new javax.swing.JLabel();
+        precio_hospedaje = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        precio_act = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        precio_act1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -129,44 +135,67 @@ public class preferencias extends javax.swing.JFrame {
 
         visitas.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setText("Precio máx. hospedaje");
+
+        jLabel2.setText("Precio máx. actividades");
+
+        jLabel3.setText("Precio máx. trasnporte");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(hotel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ciudad, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(campo)
-                                        .addGap(216, 216, 216))
-                                    .addComponent(playa, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(montaña, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(tren)
-                                    .addComponent(avion)
-                                    .addComponent(carro)
-                                    .addComponent(vegetariana)
-                                    .addComponent(gourmet)
-                                    .addComponent(criolla)))
-                            .addComponent(selva, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hotel)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(218, 218, 218)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(ciudad, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(campo)
+                                                .addGap(216, 216, 216))
+                                            .addComponent(playa, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(montaña, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(tren)
+                                            .addComponent(avion)
+                                            .addComponent(carro)
+                                            .addComponent(vegetariana)
+                                            .addComponent(gourmet)
+                                            .addComponent(criolla)))
+                                    .addComponent(selva, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(posada)
-                                    .addComponent(pareja)
-                                    .addComponent(solo)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(grupo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(familia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(218, 218, 218)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(posada)
+                                            .addComponent(pareja)
+                                            .addComponent(solo)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(grupo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(familia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(precio_act, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(precio_hospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(precio_act1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -195,7 +224,7 @@ public class preferencias extends javax.swing.JFrame {
                         .addComponent(tren, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(solo, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(excursion))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(playa, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(avion, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -213,26 +242,37 @@ public class preferencias extends javax.swing.JFrame {
                         .addComponent(ski_acuatico)
                         .addComponent(ciudad))
                     .addComponent(familia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, Short.MAX_VALUE)
+                .addGap(9, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(selva)
                     .addComponent(masajes))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(yoga)
-                        .addGap(45, 45, 45))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(vegetariana)
-                        .addGap(25, 25, 25)))
+                        .addGap(25, 25, 25))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel1)
+                                .addComponent(precio_hospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(yoga))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(precio_act, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(gourmet)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(visitas)
-                                .addGap(13, 13, 13)))
+                                .addGap(13, 13, 13))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(precio_act1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(27, 27, 27)
@@ -266,12 +306,18 @@ public class preferencias extends javax.swing.JFrame {
     private javax.swing.JRadioButton gourmet;
     private javax.swing.JSpinner grupo;
     private javax.swing.JRadioButton hotel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton masajes;
     private javax.swing.JRadioButton montaña;
     private javax.swing.JRadioButton moto_acuatica;
     private javax.swing.JRadioButton pareja;
     private javax.swing.JRadioButton playa;
     private javax.swing.JRadioButton posada;
+    private javax.swing.JTextField precio_act;
+    private javax.swing.JTextField precio_act1;
+    private javax.swing.JTextField precio_hospedaje;
     private javax.swing.JRadioButton selva;
     private javax.swing.JRadioButton ski_acuatico;
     private javax.swing.JRadioButton solo;
