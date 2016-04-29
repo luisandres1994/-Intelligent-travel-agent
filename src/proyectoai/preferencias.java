@@ -21,7 +21,7 @@ public class preferencias extends javax.swing.JFrame {
         this.setSize(978, 725);
         this.setTitle("Agente Turistico");
         JLabel fondo=new JLabel();
-        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\prueba\\proyecto\\src\\imagenes\\interfaz_preferencias.jpg"));
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/interfaz_preferencias.jpg")));
         fondo.setFocusable(false);
         fondo.setSize(this.getSize());
         this.add(fondo);
@@ -65,7 +65,7 @@ public class preferencias extends javax.swing.JFrame {
         jRadioButton25 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(978, 725));
+        setResizable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,7 +100,7 @@ public class preferencias extends javax.swing.JFrame {
                             .addComponent(jRadioButton13)
                             .addComponent(jRadioButton14)
                             .addComponent(jRadioButton15))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jRadioButton23)
@@ -128,7 +128,7 @@ public class preferencias extends javax.swing.JFrame {
                         .addComponent(jRadioButton6, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jRadioButton15, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jRadioButton23))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jRadioButton8, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -145,7 +145,7 @@ public class preferencias extends javax.swing.JFrame {
                     .addComponent(jRadioButton21)
                     .addComponent(jRadioButton12)
                     .addComponent(jRadioButton4))
-                .addGap(16, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton5)
                     .addComponent(jRadioButton20))
