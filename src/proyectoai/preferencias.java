@@ -18,12 +18,12 @@ public class preferencias extends javax.swing.JFrame {
         a=ag;
         initComponents();
         
-        this.setSize(750, 580);
+        this.setSize(978, 720);
         this.setTitle("Agente Turistico");
         JLabel fondo=new JLabel();
         fondo.setIcon(new javax.swing.ImageIcon("F:\\Documentos\\NetBeansProjects\\proyectoai\\src\\imagenes\\interfaz_preferencias.jpg"));
         fondo.setFocusable(false);
-        fondo.setSize(750,580);
+        fondo.setSize(this.getSize());
         this.jPanel1.add(fondo);
         this.setVisible(true);
    
