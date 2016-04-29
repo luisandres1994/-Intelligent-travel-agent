@@ -43,6 +43,5 @@ CREATE TABLE turista
 	destino VARCHAR(21),
 	actividades VARCHAR(101),
 	comida VARCHAR(30),
-	costos float
 );
 

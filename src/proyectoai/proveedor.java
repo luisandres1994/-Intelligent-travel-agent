@@ -45,7 +45,7 @@ public class proveedor  extends Agent {
             ServiceDescription servicio = new ServiceDescription();
              servicio.setType((String) args[0]);
             servicio.setName("Venta de "+(String) args[0]);
-
+           //se inscribe en las paginas amarillas (directorio facilitador)
             DFAgentDescription descripcion = new DFAgentDescription();
             descripcion.setName(getAID());
             descripcion.addLanguages("Español");
@@ -67,11 +67,10 @@ public class proveedor  extends Agent {
     
     private void loadDB() throws ClassNotFoundException, SQLException, IOException
     {
+        //coneccion a la base de datos.
         Class.forName("oracle.jdbc.driver.OracleDriver");
         con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
     }
- 
-    //Hacemos una simulación para que pueda dar que existe o no coche (sobre un 80% probab).
  
  
     //Calculamos un precio para el coche aleatoriamente (estará entre 8000 y 30000).
@@ -92,6 +91,7 @@ public class proveedor  extends Agent {
         protected ACLMessage prepareResponse(ACLMessage cfp) throws NotUnderstoodException, RefuseException {
                 
             
+                //levantamos la base de datos ORACLE
                  try {
                         loadDB();
                     } catch (ClassNotFoundException ex) {
@@ -101,7 +101,9 @@ public class proveedor  extends Agent {
                     } catch (IOException ex) {
                         Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
                     }
-            
+                 
+                //construye la consulta que se realizara sobre la base de datos
+                 //segun las preferencias recibidas por el agente turistico
                 String[] consulta=cfp.getContent().split("/");
                 String[] select=consulta[0].split(" ");
                 String[] from=consulta[1].split(" ");
@@ -115,6 +117,8 @@ public class proveedor  extends Agent {
                     query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
                 query+=(String)args[0]+"."+select[i]+"="+where[i]+"; ";
                 System.out.println(query);
+                
+                
                 
                 ACLMessage oferta = cfp.createReply();
                 oferta.setPerformative(ACLMessage.PROPOSE);

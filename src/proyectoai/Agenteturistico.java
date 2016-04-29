@@ -22,12 +22,12 @@ public class Agenteturistico extends Agent {
     public int precionMaximo;
     interfas I;
     Object[] args;
-    String donde,Como,comida,cuantos,hospedaje,actividades;
+    public String donde,Como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
        
        args = this.getArguments();
         I=new interfas(this);
-        
+        donde=Como=comida=cuantos=hospedaje=actividades="";
         
  
     } // Fin del setup
@@ -39,6 +39,7 @@ public class Agenteturistico extends Agent {
         public iniciarcontranet(String p)
         {
             Proveedor=p;
+            
         }
         
         @Override
@@ -65,7 +66,7 @@ public class Agenteturistico extends Agent {
                     }
             //Protocolo que vamos a utilizar
                     mensajeCFP.setProtocol(FIPANames.InteractionProtocol.FIPA_CONTRACT_NET);
-                    mensajeCFP.setContent("destino tipo/ transporte/caracas terrestre");
+                    mensajeCFP.setContent("destino tipo/ "+Proveedor+" /caracas terrestre");
  
                     //Indicamos el tiempo que esperaremos por las ofertas.
                     mensajeCFP.setReplyByDate(new Date(System.currentTimeMillis() + 15000));
