@@ -18,7 +18,7 @@ public class preferencias extends javax.swing.JFrame {
         this.setSize(750, 580);
         this.setTitle("Agente Turistico");
         JLabel fondo=new JLabel();
-        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\prueba\\src\\img\\interfaz_preferencias.jpg"));
+        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\prueba\\src\\imgenes\\interfaz_preferencias.jpg"));
         fondo.setFocusable(false);
         fondo.setSize(this.getSize());
         
