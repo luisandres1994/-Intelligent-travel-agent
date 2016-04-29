@@ -19,18 +19,29 @@ import jade.proto.ContractNetResponder;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
  
 public class proveedor  extends Agent {
     
     private  Object[] args;
     private Vector vector=new Vector(20, 5);
+   private static Connection con;
    
+   private static ResultSet rset;
+    private static Statement stmt,stmt1;
+    int id_dim;
+    String query;
     protected void setup() {
           args = this.getArguments();
       
-            
-             //Registro del servicio de venta de coches en las páginas amarillas.
             ServiceDescription servicio = new ServiceDescription();
              servicio.setType((String) args[0]);
             servicio.setName("Venta de "+(String) args[0]);
@@ -46,17 +57,31 @@ public class proveedor  extends Agent {
                 e.printStackTrace();
             }
         
-    //Se crea una plantilla que filtre los mensajes a recibir.
         MessageTemplate template = ContractNetResponder.createMessageTemplate(FIPANames.InteractionProtocol.FIPA_CONTRACT_NET);
  
-        //Añadimos los comportamientos ante mensajes recibidos
         this.addBehaviour(new CrearOferta(this, template));
+        
+      /*  try {
+            loadDB();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+    }
+    
+    
+    private void loadDB() throws ClassNotFoundException, SQLException, IOException
+    {
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
+    
     }
  
     //Hacemos una simulación para que pueda dar que existe o no coche (sobre un 80% probab).
-    private boolean existeCoche() {
-        return (Math.random() * 100 > 20);
-    }
+ 
  
     //Calculamos un precio para el coche aleatoriamente (estará entre 8000 y 30000).
     private int obtenerPrecio() {
@@ -75,22 +100,25 @@ public class proveedor  extends Agent {
  
         protected ACLMessage prepareResponse(ACLMessage cfp) throws NotUnderstoodException, RefuseException {
             
-            if (proveedor.this.leerarchivo()) {
-                int precio = proveedor.this.obtenerPrecio();
-                System.out.printf("Autos %s: Preparando oferta (%d euros).\n", this.myAgent.getLocalName(), precio);
- 
-               
+                String[] consulta=cfp.getContent().split("/");
+                String[] select=consulta[0].split(" ");
+                String[] from=consulta[1].split(" ");
+                String[] where=consulta[2].split(" ");
+                query="select ";
+                int i;
+                for(i=0; i<select.length; i++)
+                    query=query+(String)args[0]+"."+select[i]+", ";
+                query+=(String)args[0]+".precio from "+(String)args[0]+" where ";
+                for(i=0; i<where.length-1; i++)
+                    query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
+                query+=(String)args[0]+"."+select[i]+"="+where[i]+"; ";
+                System.out.println(query);
+                
                 ACLMessage oferta = cfp.createReply();
                 oferta.setPerformative(ACLMessage.PROPOSE);
-                oferta.setContent(String.valueOf(precio));
-                System.out.println(cfp.getContent());
+                oferta.setContent(String.valueOf(proveedor.this.obtenerPrecio()));
                 return oferta;
-                
-            } else {
-                //Si no hay ofertas disponibles rechazamos el propose
-                System.out.printf("Autos %s: No tenemos ofertas disponibles.\n", this.myAgent.getLocalName());
-                throw new RefuseException("Fallo en la evaluación.");
-            }
+            
         }
  
         protected ACLMessage prepareResultNotification(ACLMessage cfp, ACLMessage propose, ACLMessage accept) throws FailureException {
