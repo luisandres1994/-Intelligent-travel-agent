@@ -85,6 +85,7 @@ public class preferencias extends javax.swing.JFrame {
         precio_act = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         precio_act1 = new javax.swing.JTextField();
+        Play = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -141,6 +142,13 @@ public class preferencias extends javax.swing.JFrame {
 
         jLabel3.setText("Precio máx. trasnporte");
 
+        Play.setText("Buscar Ofertas");
+        Play.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlayActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,23 +160,28 @@ public class preferencias extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(hotel)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(ciudad, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ciudad)
+                                    .addComponent(selva)
+                                    .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(layout.createSequentialGroup()
+                                                .addGap(14, 14, 14)
                                                 .addComponent(campo)
                                                 .addGap(216, 216, 216))
-                                            .addComponent(playa, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(montaña, javax.swing.GroupLayout.Alignment.LEADING))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(playa, javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(montaña, javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(Play, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(tren)
                                             .addComponent(avion)
                                             .addComponent(carro)
                                             .addComponent(vegetariana)
                                             .addComponent(gourmet)
-                                            .addComponent(criolla)))
-                                    .addComponent(selva, javax.swing.GroupLayout.Alignment.LEADING))
+                                            .addComponent(criolla))))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(218, 218, 218)
@@ -224,7 +237,7 @@ public class preferencias extends javax.swing.JFrame {
                         .addComponent(tren, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(solo, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(excursion))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(playa, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(avion, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -279,7 +292,10 @@ public class preferencias extends javax.swing.JFrame {
                                 .addComponent(criolla))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(bici_patines))))
+                                .addComponent(bici_patines))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(Play, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(hotel)
                         .addGap(40, 40, 40)
@@ -290,10 +306,16 @@ public class preferencias extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
+        // TODO add your handling code here:
+        a.play();
+    }//GEN-LAST:event_PlayActionPerformed
+
   
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Play;
     private javax.swing.JRadioButton avion;
     private javax.swing.JRadioButton bici_patines;
     private javax.swing.JRadioButton campo;

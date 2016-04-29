@@ -20,14 +20,14 @@ public class Agenteturistico extends Agent {
  
     //Precio máximo que se pagará por un coche.
     public int precionMaximo;
-    interfas I;
+    preferencias I;
     Object[] args;
     Vector propuestas=new Vector(3,1);
     public String donde,Como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
        
        args = this.getArguments();
-        I=new interfas(this);
+        I=new preferencias(this);
         donde=Como=comida=cuantos=hospedaje=actividades="";
         
  
