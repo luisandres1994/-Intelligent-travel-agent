@@ -61,15 +61,7 @@ public class proveedor  extends Agent {
  
         this.addBehaviour(new CrearOferta(this, template));
         
-      /*  try {
-            loadDB();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+     
     }
     
     
@@ -77,7 +69,6 @@ public class proveedor  extends Agent {
     {
         Class.forName("oracle.jdbc.driver.OracleDriver");
         con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
-    
     }
  
     //Hacemos una simulación para que pueda dar que existe o no coche (sobre un 80% probab).
@@ -99,6 +90,17 @@ public class proveedor  extends Agent {
         }
  
         protected ACLMessage prepareResponse(ACLMessage cfp) throws NotUnderstoodException, RefuseException {
+                
+            
+                 try {
+                        loadDB();
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    }
             
                 String[] consulta=cfp.getContent().split("/");
                 String[] select=consulta[0].split(" ");

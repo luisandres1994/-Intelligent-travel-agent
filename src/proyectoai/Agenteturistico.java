@@ -16,17 +16,17 @@ import java.util.Vector;
  
 public class Agenteturistico extends Agent {
  
-    //Número de ofertas que se considerarán.
     private int numeroDeOfertas;
  
     //Precio máximo que se pagará por un coche.
     public int precionMaximo;
-    preferencias I;
+    interfas I;
     Object[] args;
+    String donde,Como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
-        //El precio máximo se recibirá como argumento de entrada.
+       
        args = this.getArguments();
-        I=new preferencias(this);
+        I=new interfas(this);
         
         
  
@@ -35,15 +35,20 @@ public class Agenteturistico extends Agent {
    
     public class iniciarcontranet extends SimpleBehaviour
     {
-      
+        private String Proveedor;
+        public iniciarcontranet(String p)
+        {
+            Proveedor=p;
+        }
+        
         @Override
         public void action() {
                 precionMaximo=23456;
 
-            //Búsqueda del servicio de venta de coches en las páginas amarillas.
+            //Búsqueda del proveedor servicio  las páginas amarillas.
             ServiceDescription servicio = new ServiceDescription();
-            servicio.setType((String) args[0]);
-            servicio.setName("Venta de "+(String) args[0]);
+            servicio.setType(Proveedor);
+            servicio.setName("Venta de "+Proveedor);
             DFAgentDescription descripcion = new DFAgentDescription();
             descripcion.addLanguages("Español");
             descripcion.addServices(servicio);
@@ -51,10 +56,8 @@ public class Agenteturistico extends Agent {
             try {
                 DFAgentDescription[] resultados = DFService.search(Agenteturistico.this, descripcion);
                 if (resultados.length <= 0) {
-                    System.out.println("No existen ventas de coches.");
+                    //no hay disponibilidad
                 } else {
-                    System.out.println("Busco coche, hay " + resultados.length + " ofertas...");
- 
                     //Creamos el mensaje CFP(Call For Proposal) cumplimentando sus parámetros
                     ACLMessage mensajeCFP = new ACLMessage(ACLMessage.CFP);
                     for (DFAgentDescription agente:resultados) {
@@ -86,7 +89,9 @@ public class Agenteturistico extends Agent {
     
      public void play()
     {
-        addBehaviour(new iniciarcontranet());
+        addBehaviour(new iniciarcontranet("transporte"));
+        addBehaviour(new iniciarcontranet("alojamiento"));
+        addBehaviour(new iniciarcontranet("turista"));
     }
     private class ManejoOpciones extends ContractNetInitiator {
  
@@ -94,12 +99,7 @@ public class Agenteturistico extends Agent {
             super(agente, plantilla);
         }
  
-        //Manejador de proposiciones.
-        protected void handlePropose(ACLMessage propuesta, Vector aceptadas) {
-            System.out.printf("%s: Recibida oferta de autos %s. Ofrece un coche por %s euros.\n",
-                this.myAgent.getLocalName(), propuesta.getSender().getLocalName(), propuesta.getContent());
-        }
- 
+        
         //Manejador de rechazos de proposiciones.
         protected void handleRefuse(ACLMessage rechazo) {
             System.out.printf("%s: Autos %s no tiene coches que ofrecer.\n",
