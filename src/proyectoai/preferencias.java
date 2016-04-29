@@ -4,17 +4,28 @@
  */
 package proyectoai;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author admin
  */
 public class preferencias extends javax.swing.JFrame {
 
-    /**
-     * Creates new form preferencias
-     */
+    private JLabel img=null;
+    
     public preferencias() {
+ 
         initComponents();
+        //this.setUndecorated(true); 
+        this.setSize(750,580); 
+        this.setTitle("Agente Turístico");
+        this.setLocationRelativeTo(null);
+        img=new JLabel(new ImageIcon("img/interfaz_preferencias.jpg"));
+        this.setContentPane(img);
+        this.setVisible(true);
+   
     }
 
     /**
@@ -85,7 +96,7 @@ public class preferencias extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new preferencias().setVisible(true);
+                //new preferencias().setVisible(true);
             }
         });
     }
