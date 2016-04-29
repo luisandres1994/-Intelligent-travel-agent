@@ -4,6 +4,7 @@
  */
 package proyectoai;
 
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -27,8 +28,26 @@ public class preferencias extends javax.swing.JFrame {
         this.add(fondo);
         this.setVisible(true);
         
+        ButtonGroup grupo_donde= new ButtonGroup();
+        grupo_donde.add(montaña);
+        grupo_donde.add(playa);
+        grupo_donde.add(campo);
+        grupo_donde.add(ciudad);
+        grupo_donde.add(selva);
         
+        ButtonGroup grupo_como= new ButtonGroup();
+        grupo_como.add(tren);
+        grupo_como.add(avion);
+        grupo_como.add(carro);
+
+        ButtonGroup grupo_hospedaje= new ButtonGroup();
+        grupo_hospedaje.add(hotel);
+        grupo_hospedaje.add(posada);   
         
+        ButtonGroup grupo_personas= new ButtonGroup();
+        grupo_personas.add(solo);
+        grupo_personas.add(pareja);
+
     }
 
     @SuppressWarnings("unchecked")
