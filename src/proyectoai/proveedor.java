@@ -27,8 +27,8 @@ public class proveedor  extends Agent {
             
              //Registro del servicio de venta de coches en las páginas amarillas.
             ServiceDescription servicio = new ServiceDescription();
-             servicio.setType("Autos");
-            servicio.setName("Venta de coches");
+             servicio.setType((String) args[0]);
+            servicio.setName("Venta de "+(String) args[0]);
 
             DFAgentDescription descripcion = new DFAgentDescription();
             descripcion.setName(getAID());
