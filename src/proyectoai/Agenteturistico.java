@@ -21,12 +21,12 @@ public class Agenteturistico extends Agent {
  
     //Precio máximo que se pagará por un coche.
     public int precionMaximo;
-    interfas I;
+    preferencias I;
  
     protected void setup() {
         //El precio máximo se recibirá como argumento de entrada.
         Object[] args = this.getArguments();
-        I=new interfas(this);
+        I=new preferencias(this);
         
         
  
