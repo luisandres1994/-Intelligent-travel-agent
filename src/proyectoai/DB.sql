@@ -41,9 +41,8 @@ CREATE TABLE alojamiento
 CREATE TABLE turista
 (
 	cod number PRIMARY KEY,
-	destino VARCHAR(21),
 	precio float,
-	ciudad VARCHAR(21),
+        destino VARCHAR(21),
 	actividades VARCHAR(101),
 	cant_perso NUMBER
 );
