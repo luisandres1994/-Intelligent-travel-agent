@@ -17,6 +17,10 @@ import javax.swing.JLabel;
 public class preferencias extends javax.swing.JFrame {
 
     Agenteturistico a;
+    ButtonGroup grupo_donde= new ButtonGroup();
+    ButtonGroup grupo_como= new ButtonGroup();
+    ButtonGroup grupo_hospedaje= new ButtonGroup();
+    ButtonGroup grupo_personas= new ButtonGroup();
     public preferencias(Agenteturistico ag) {
         a=ag;
         initComponents();
@@ -34,7 +38,7 @@ public class preferencias extends javax.swing.JFrame {
         //Se declaran los ButtonGroup para que el cliente no seleccione multiples opciones
         
         //Grupon lugar
-        ButtonGroup grupo_donde= new ButtonGroup();
+        
         grupo_donde.add(montaña);
         grupo_donde.add(playa);
         grupo_donde.add(campo);
@@ -42,18 +46,16 @@ public class preferencias extends javax.swing.JFrame {
         grupo_donde.add(selva);
         
         //Grupo medio de transporte
-        ButtonGroup grupo_como= new ButtonGroup();
+        
         grupo_como.add(tren);
         grupo_como.add(avion);
         grupo_como.add(carro);
 
         //Grupo hospedaje
-        ButtonGroup grupo_hospedaje= new ButtonGroup();
         grupo_hospedaje.add(hotel);
         grupo_hospedaje.add(posada);   
         
         //Grupo Cantidad de personas
-        ButtonGroup grupo_personas= new ButtonGroup();
         grupo_personas.add(solo);
         grupo_personas.add(pareja);
         
@@ -355,9 +357,8 @@ public class preferencias extends javax.swing.JFrame {
     public String getSelectedButtonText(ButtonGroup buttonGroup) {
         for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
-
             if (button.isSelected()) {
-                return button.getText();
+                return button.getName();
             }
         }
 
