@@ -67,9 +67,21 @@ public class proveedor  extends Agent {
    
  
  
-    //Calculamos un precio para el coche aleatoriamente (estará entre 8000 y 30000).
-    private int obtenerPrecio() {
-        return (int) (Math.random() * 22000) + 8000;
+    //damos el paquete con el precio mas barato
+    private int obtenerPrecio() throws SQLException {
+        try {
+                        stmt = con.createStatement();
+                        String Query="select min("+(String)args[0]+".precio) as minimo from "+(String)args[0];
+                        System.out.println(Query);
+                        rset= stmt.executeQuery("select sum("+(String)args[0]+".precio) as suma from "+(String)args[0]);
+                        
+                    } catch (SQLException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+        if(rset.next());
+        int r=rset.getInt(1);
+        stmt.close();
+        return r;
     }
  
     // Simula fallos en la entrega de ofertas
@@ -98,12 +110,6 @@ public class proveedor  extends Agent {
                     System.out.print(clex);
                 }
                 
-                
-               // Class.forName("oracle.jdbc.driver.OracleDriver");
-              //  con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
-                 
-                
-                
                 //construye la consulta que se realizara sobre la base de datos
                  //segun las preferencias recibidas por el agente turistico
                 String[] consulta=cfp.getContent().split("/");
@@ -116,31 +122,41 @@ public class proveedor  extends Agent {
                     query=query+(String)args[0]+"."+select[i]+", ";
                 query+=(String)args[0]+".precio from "+(String)args[0]+" where ";
                 
-                String aux=query;
+               //se agregan las condiciones a la consulta y se verifican una por una, se no cumplirse una el agente
+                //rechaza el cfp porque no hay ofertas disponibles con las condiciones dadas
                 for(i=0; i<where.length-1; i++)
                 {
-                    /*try {
+                    query+=(String)args[0]+"."+select[i]+"='"+where[i]+"'";
+                    try { //verificacion de condiciones una por una
                         stmt = con.createStatement();
                         rset= stmt.executeQuery(query);
+                        if(!rset.next())encontro =false; //no puede dar oferta
+                        stmt.close();
                     } catch (SQLException ex) {
                         Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                    }*/
-                    
-                    //if(!rset.next())encontro =false;
-                    query+=(String)args[0]+"."+select[i]+"='"+where[i]+"', ";
-                    
+                    }
+                    query+=" and ";            
                 }
                 query+=(String)args[0]+"."+select[i]+"='"+where[i]+"' ";
-                
-               System.out.println(query);
-               
+               try {
+                        stmt = con.createStatement();
+                        rset= stmt.executeQuery(query);
+                        if(!rset.next())encontro =false;
+                        stmt.close();
+                    } catch (SQLException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    }
         
                 if(encontro)
                 {
                 ACLMessage oferta = cfp.createReply();
                 oferta.setPerformative(ACLMessage.PROPOSE);
-                oferta.setContent(String.valueOf(proveedor.this.obtenerPrecio()));
-                    return oferta;
+                    try {
+                     oferta.setContent(String.valueOf(proveedor.this.obtenerPrecio()));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                return oferta;
                 }else
                 {
                     //Si no hay ofertas disponibles rechazamos el propose
