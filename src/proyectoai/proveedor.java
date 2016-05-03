@@ -53,15 +53,10 @@ public class proveedor  extends Agent {
 
             try {
                 DFService.register(this, descripcion);
-            } catch (FIPAException e) {
-                e.printStackTrace();
-            }
+            } catch (FIPAException e) {  e.printStackTrace();}
         
         MessageTemplate template = ContractNetResponder.createMessageTemplate(FIPANames.InteractionProtocol.FIPA_CONTRACT_NET);
- 
         this.addBehaviour(new CrearOferta(this, template));
-        
-     
     }
     
     
@@ -104,11 +99,8 @@ public class proveedor  extends Agent {
                     Class.forName("oracle.jdbc.driver.OracleDriver");
                     con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
                    
-                }catch(SQLException slex){
-                    System.out.print(slex);
-                }catch(ClassNotFoundException clex){
-                    System.out.print(clex);
-                }
+                }catch(SQLException slex){System.out.print(slex);}
+                 catch(ClassNotFoundException clex){System.out.print(clex);}
                 
                 //construye la consulta que se realizara sobre la base de datos
                  //segun las preferencias recibidas por el agente turistico
@@ -135,21 +127,20 @@ public class proveedor  extends Agent {
                         if(!rset.next())encontro =false; //no puede dar disponibilidad
                         stmt.close();
                     } catch (SQLException ex) {
-                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);}
+                    
                     aux+=" and ";
                     query+=" and ";          
                 }
                 aux+=(String)args[0]+"."+select[i]+"='"+where[i]+"' ";
                 query+=(String)args[0]+"."+select[i]+"='"+where[i]+"' ";
-               try {
+                    try {
                         stmt = con.createStatement();
                         rset= stmt.executeQuery(query);
                         if(!rset.next())encontro =false;
                         stmt.close();
                     } catch (SQLException ex) {
-                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex); }
                 
                
                //si encontro disponibilidad
@@ -160,23 +151,24 @@ public class proveedor  extends Agent {
                     try {
                      oferta.setContent(String.valueOf(proveedor.this.obtenerPrecio()));
                     } catch (SQLException ex) {
-                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);}
                 return oferta;
                 }else
                 {
                     //Si no hay ofertas disponibles rechazamos el propose
-                throw new RefuseException("Fallo la solicitud.");
+                    throw new RefuseException("Fallo la solicitud.");
                 }
         }
- 
+        
+
+        //Hemos recibido una aceptación de nuestra oferta, enviamos los resultados
         protected ACLMessage prepareResultNotification(ACLMessage cfp, ACLMessage propose, ACLMessage accept) throws FailureException {
-            //Hemos recibido una aceptación de nuestra oferta, enviamos los resultados
+            
             
                 String res="";
                 int i;
-            if (devolveroferta()) {
-                
+            if (devolveroferta()) 
+            {
                 try {
                     //armamos ya la consulta general con las condiciones dadas
                     //se envia los resultados de cada fila de la consulta separadas por /
@@ -185,15 +177,11 @@ public class proveedor  extends Agent {
                     while(rset.next()) 
                     {
                          for(i=1; i<=rset.getMetaData().getColumnCount(); i++)
-                         {
                              res+=rset.getString(i)+" ";
 
-                         }
                         res+="/ ";
                     }
-                } catch (SQLException ex) {
-                    Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (SQLException ex) {Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex); }
      
  
                 ACLMessage inform = accept.createReply();
