@@ -23,11 +23,11 @@ public class Panel extends javax.swing.JPanel {
 
     @Override
     public void paintComponent (Graphics g){
-    Dimension tamanio = getSize();
-    ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/imagenes/Koala.jpg"));
-    g.drawImage(imagenFondo.getImage(),0,0,tamanio.width, tamanio.height, null);
-    setOpaque(false);
-    super.paintComponent(g);
+        Dimension tamanio = getSize();
+        ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/imagenes/ofertas_viaje.jpg"));
+        g.drawImage(imagenFondo.getImage(),0,0,tamanio.width, tamanio.height, null);
+        setOpaque(false);
+        super.paintComponent(g);
     }
     
     

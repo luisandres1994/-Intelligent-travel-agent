@@ -21,6 +21,7 @@ public class Agenteturistico extends Agent {
     //Precio máximo que se pagará por un coche.
     public int precionMaximo;
     preferencias I;
+    Ofertas O=new Ofertas();
     Object[] args;
     Vector propuestas=new Vector(3,1);
     String[] transporte,alojamiento,turista;
@@ -95,6 +96,9 @@ public class Agenteturistico extends Agent {
         addBehaviour(new iniciarcontranet("transporte"));
         addBehaviour(new iniciarcontranet("alojamiento"));
         addBehaviour(new iniciarcontranet("turista"));
+        I.setVisible(false);
+        
+        O.setVisible(true);
     }
     private class ManejoOpciones extends ContractNetInitiator {
  

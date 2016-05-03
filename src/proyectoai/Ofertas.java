@@ -4,6 +4,12 @@
  */
 package proyectoai;
 
+import java.awt.BorderLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
 /**
  *
  * @author admin
@@ -15,8 +21,21 @@ public class Ofertas extends javax.swing.JFrame {
      */
     public Ofertas() {
         initComponents();
-    }
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(100, 100, 450, 300);
+        Panel p1=new Panel(780, 580);
+        p1.setBorder(new EmptyBorder(5, 5, 5, 5));
+        p1.setLayout(new BorderLayout(0, 0));
+        setContentPane(p1);
+        JLabel titulo=new JLabel("Ofertas de Viaje", JLabel.NORTH);
+        titulo.setBounds(10,20,300,30);
+        titulo.setVerticalTextPosition( SwingConstants.TOP );
+        titulo.setFont(new java.awt.Font("Cooper Black", 1, 36));
+        titulo.setForeground(new java.awt.Color(255, 255, 255));
 
+        p1.add(titulo);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,11 +51,11 @@ public class Ofertas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 505, Short.MAX_VALUE)
+            .addGap(0, 768, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 383, Short.MAX_VALUE)
+            .addGap(0, 579, Short.MAX_VALUE)
         );
 
         pack();
