@@ -189,6 +189,7 @@ public class proveedor  extends Agent {
                 ACLMessage inform = accept.createReply();
                 inform.setPerformative(ACLMessage.INFORM);
                 inform.setContent(res);
+                inform.setOntology((String)args[0]);
                 return inform;
                 
             } else {
