@@ -158,10 +158,10 @@ public class preferencias extends javax.swing.JFrame {
         masajes.setName("masajes"); // NOI18N
 
         ski_acuatico.setBackground(new java.awt.Color(255, 255, 255));
-        ski_acuatico.setName("ski acuatica"); // NOI18N
+        ski_acuatico.setName("ski acuatico"); // NOI18N
 
         moto_acuatica.setBackground(new java.awt.Color(255, 255, 255));
-        moto_acuatica.setName("monto acuatica"); // NOI18N
+        moto_acuatica.setName("moto acuatica"); // NOI18N
 
         excursion.setBackground(new java.awt.Color(255, 255, 255));
         excursion.setName("excursion"); // NOI18N
@@ -343,6 +343,97 @@ public class preferencias extends javax.swing.JFrame {
     private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
         // TODO add your handling code here:
         a.play();
+        a.donde=getSelectedButtonText(grupo_donde);
+        a.como=getSelectedButtonText(grupo_como);
+        a.hospedaje=getSelectedButtonText(grupo_hospedaje);
+        int n=0;
+        //Comida
+        if(vegetariana.isSelected()){
+            a.comida=vegetariana.getName();
+            n++;
+        }
+        if(gourmet.isSelected()){
+            if(n<0)
+                a.comida=gourmet.getName();
+            else
+                a.comida+=", "+gourmet.getName();
+            n++;
+        }
+        if(criolla.isSelected()){
+            if(n<0)
+                a.comida=criolla.getName();
+            else
+                a.comida+=", "+criolla.getName();
+            n++;
+        }
+        //Cantidad de personas
+        String cant_per=getSelectedButtonText(grupo_personas);
+        if(cant_per==null){
+            int amigos=(Integer) grupo.getValue();
+            int familiares=(Integer) familia.getValue();
+            if(amigos<familiares)
+                cant_per=Integer.toString(familiares);
+            else
+               cant_per=Integer.toString(amigos);
+            a.cuantos=cant_per;
+        }
+        //Actividades
+        n=0;
+        if(excursion.isSelected()){
+            a.actividades=excursion.getName();
+            n++;
+        }
+        if(escalada.isSelected()){
+            if(n<0)
+                a.actividades=escalada.getName();
+            else
+                a.actividades+=", "+escalada.getName();
+            n++;
+        }
+        if(moto_acuatica.isSelected()){
+            if(n<0)
+                a.actividades=moto_acuatica.getName();
+            else
+                a.actividades+=", "+moto_acuatica.getName();
+            n++;
+        }
+        if(ski_acuatico.isSelected()){
+            if(n<0)
+                a.actividades=ski_acuatico.getName();
+            else
+                a.actividades+=", "+ski_acuatico.getName();
+            n++;
+        }
+        if(masajes.isSelected()){
+            if(n<0)
+                a.actividades=masajes.getName();
+            else
+                a.actividades+=", "+masajes.getName();
+            n++;
+        }
+        if(yoga.isSelected()){
+            if(n<0)
+                a.actividades=yoga.getName();
+            else
+                a.actividades+=", "+yoga.getName();
+            n++;
+        }
+        if(visitas.isSelected()){
+            if(n<0)
+                a.actividades=visitas.getName();
+            else
+                a.actividades+=", "+visitas.getName();
+            n++;
+        }
+        if(bici_patines.isSelected()){
+            if(n<0)
+                a.actividades=bici_patines.getName();
+            else
+                a.actividades+=", "+bici_patines.getName();
+            n++;
+        }
+        System.out.println(a.actividades);
+
     }//GEN-LAST:event_PlayActionPerformed
 
     public String getSelectedButtonText(ButtonGroup buttonGroup) {

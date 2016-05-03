@@ -24,12 +24,12 @@ public class Agenteturistico extends Agent {
     Object[] args;
     Vector propuestas=new Vector(3,1);
     String[] transporte,alojamiento,turista;
-    public String donde,Como,comida,cuantos,hospedaje,actividades;
+    public String donde,como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
        
        args = this.getArguments();
         I=new preferencias(this);
-        donde=Como=comida=cuantos=hospedaje=actividades="";
+        donde=como=comida=cuantos=hospedaje=actividades="";
         
  
     } // Fin del setup
