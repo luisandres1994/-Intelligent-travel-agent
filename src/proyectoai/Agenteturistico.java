@@ -81,6 +81,10 @@ public class Agenteturistico extends Agent {
                         else comida="";
                         mensajeCFP.setContent("destino tipo cant_perso "+comid+"/"+Proveedor+"/"+donde+" "+hospedaje+" "+cuantos+" "+comida);
                     }
+                    else if(Proveedor.equals("turista"))
+                    { 
+                        mensajeCFP.setContent("destino actividades cant_perso/"+Proveedor+"/"+donde+" "+actividades+" "+cuantos);
+                    }
                     //Indicamos el tiempo que esperaremos por las ofertas.
                     mensajeCFP.setReplyByDate(new Date(System.currentTimeMillis() + 15000));
  
@@ -162,6 +166,7 @@ public class Agenteturistico extends Agent {
                     if (oferta <= Integer.parseInt(I.getmaxprecio(mensaje.getOntology()))) {
                         aceptado = respuesta;
                     }
+                    
                 }
             }
             
@@ -172,7 +177,13 @@ public class Agenteturistico extends Agent {
         }
  
         protected void handleInform(ACLMessage inform) {
-            
+           String[] res = inform.getContent().split("/");
+           System.out.println("La propuesta del proveedor "+inform.getOntology());
+           int i;
+           for(i=0; i<res.length; i++)
+           {
+               System.out.println(res[i]);
+           }
         }
     }
     }

@@ -158,16 +158,16 @@ public class preferencias extends javax.swing.JFrame {
         masajes.setName("masajes"); // NOI18N
 
         ski_acuatico.setBackground(new java.awt.Color(255, 255, 255));
-        ski_acuatico.setName("ski acuatico"); // NOI18N
+        ski_acuatico.setName("ski_acuatico"); // NOI18N
 
         moto_acuatica.setBackground(new java.awt.Color(255, 255, 255));
-        moto_acuatica.setName("moto acuatica"); // NOI18N
+        moto_acuatica.setName("moto_acuatica"); // NOI18N
 
         excursion.setBackground(new java.awt.Color(255, 255, 255));
         excursion.setName("excursion"); // NOI18N
 
         bici_patines.setBackground(new java.awt.Color(255, 255, 255));
-        bici_patines.setName("bici o patinaje"); // NOI18N
+        bici_patines.setName("bici_patinaje"); // NOI18N
 
         visitas.setBackground(new java.awt.Color(255, 255, 255));
         visitas.setName("visitas"); // NOI18N
@@ -356,14 +356,14 @@ public class preferencias extends javax.swing.JFrame {
             if(n<0)
                 a.comida=gourmet.getName();
             else
-                a.comida+=", "+gourmet.getName();
+                a.comida+=","+gourmet.getName();
             n++;
         }
         if(criolla.isSelected()){
             if(n<0)
                 a.comida=criolla.getName();
             else
-                a.comida+=", "+criolla.getName();
+                a.comida+=","+criolla.getName();
             n++;
         }
         //Cantidad de personas
@@ -388,49 +388,49 @@ public class preferencias extends javax.swing.JFrame {
             if(n<0)
                 a.actividades=escalada.getName();
             else
-                a.actividades+=", "+escalada.getName();
+                a.actividades+=","+escalada.getName();
             n++;
         }
         if(moto_acuatica.isSelected()){
             if(n<0)
                 a.actividades=moto_acuatica.getName();
             else
-                a.actividades+=", "+moto_acuatica.getName();
+                a.actividades+=","+moto_acuatica.getName();
             n++;
         }
         if(ski_acuatico.isSelected()){
             if(n<0)
                 a.actividades=ski_acuatico.getName();
             else
-                a.actividades+=", "+ski_acuatico.getName();
+                a.actividades+=","+ski_acuatico.getName();
             n++;
         }
         if(masajes.isSelected()){
             if(n<0)
                 a.actividades=masajes.getName();
             else
-                a.actividades+=", "+masajes.getName();
+                a.actividades+=","+masajes.getName();
             n++;
         }
         if(yoga.isSelected()){
             if(n<0)
                 a.actividades=yoga.getName();
             else
-                a.actividades+=", "+yoga.getName();
+                a.actividades+=","+yoga.getName();
             n++;
         }
         if(visitas.isSelected()){
             if(n<0)
                 a.actividades=visitas.getName();
             else
-                a.actividades+=", "+visitas.getName();
+                a.actividades+=","+visitas.getName();
             n++;
         }
         if(bici_patines.isSelected()){
             if(n<0)
                 a.actividades=bici_patines.getName();
             else
-                a.actividades+=", "+bici_patines.getName();
+                a.actividades+=","+bici_patines.getName();
             n++;
         }
 
