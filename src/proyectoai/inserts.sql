@@ -13,26 +13,26 @@ INSERT INTO transporte VALUES (153, 'avion comercial', 8000.00, 'todo', 2 , 'avi
 INSERT INTO transporte VALUES (652, 'avion comercial', 6000.00, 'todo', 1 , 'avion');
 
 
-INSERT INTO alojamiento VALUES (123, 'hotel', 5000.00, 'playa', 'Margarita', 'Hotel Hesperia', 2, 'todo' );
+INSERT INTO alojamiento VALUES (123, 'hotel', 5000.00, 'playa', 'Margarita', 'Hotel Hesperia', 2, 'vegetariana, gourmet, criolla' );
 INSERT INTO alojamiento VALUES (456, 'hotel', 15000.00, 'playa','Margarita',  'Hotel Embajador', 4, 'criolla');
-INSERT INTO alojamiento VALUES (231, 'posada', 10000.00, 'playa','Los Roques', 'Posada galapagos', 2, 'todo' );
+INSERT INTO alojamiento VALUES (231, 'posada', 10000.00, 'playa','Los Roques', 'Posada galapagos', 2, 'vegetariana, gourmet, criolla' );
 INSERT INTO alojamiento VALUES (345, 'posada', 8000.00, 'playa', 'La Tortuga', 'Bella Vista', 3, 'vegetariana');
-INSERT INTO alojamiento VALUES (657, 'hotel', 20000.00, 'montaña', 'Mérida', 'Hotel Frailejon', 5, 'todo' );
-INSERT INTO alojamiento VALUES (891, 'posada', 7000.00, 'montaña','Roraima', 'Neblina', 2, 'criolla');
-INSERT INTO alojamiento VALUES (144, 'posada', 30000.00, 'selva', 'Amazona','Anaconda',6 , 'todo');
-INSERT INTO alojamiento VALUES (253, 'hotel', 50000.00, 'ciudad','Paris', 'Hotel Moulin Rouge', 2, 'todo' );
-INSERT INTO alojamiento VALUES (182, 'posada', 30000.00, 'campo', 'Mexico', 'Campo Turístico Villas de Cortez', 2, 'gourmet');
+INSERT INTO alojamiento VALUES (657, 'hotel', 20000.00, 'montaÃ±a', 'Merida', 'Hotel Frailejon', 5, 'vegetariana, gourmet, criolla' );
+INSERT INTO alojamiento VALUES (891, 'posada', 7000.00, 'montaÃ±a','Roraima', 'Neblina', 2, 'criolla');
+INSERT INTO alojamiento VALUES (144, 'posada', 30000.00, 'selva', 'Amazona','Anaconda',6 , 'vegetariana, gourmet, criolla');
+INSERT INTO alojamiento VALUES (253, 'hotel', 50000.00, 'ciudad','Paris', 'Hotel Moulin Rouge', 1, 'vegetariana, gourmet, criolla' );
+INSERT INTO alojamiento VALUES (182, 'posada', 30000.00, 'campo', 'Mexico', 'Campo Turistico Villas de Cortez', 2, 'gourmet');
 INSERT INTO alojamiento VALUES (198, 'hotel', 40000.00, 'ciudad', 'Caracas','Hotel Melia Caracas', 4, 'criolla');
 
 INSERT INTO turista VALUES (198, 10000.00, 'ciudad', 'masajes, yoga, visitas', 2);
-INSERT INTO turista VALUES (815, 20000.00, 'playa', 'ski acuatico, moto acuatica', 3);
+INSERT INTO turista VALUES (815, 20000.00, 'playa', 'moto acuatica, ski acuatico', 3);
 INSERT INTO turista VALUES (954, 10000.00, 'selva', 'excursion, escalada, visitas', 2);
-INSERT INTO turista VALUES (169, 60000.00, 'ciudad', 'bici o patinaje, yoga, visitas',4);
+INSERT INTO turista VALUES (169, 60000.00, 'ciudad', 'yoga, visitas, bici o patinaje',4);
 INSERT INTO turista VALUES (178, 50000.00, 'campo', 'excursion, bici o patinaje',3);
 INSERT INTO turista VALUES (559, 150000.00, 'ciudad', 'masajes, yoga, visitas, bici o patinaje', 12);
 INSERT INTO turista VALUES (301, 20000.00, 'ciudad', 'masajes, visitas',5);
-INSERT INTO turista VALUES (266, 30000.00, 'playa', 'masajes, ski acuatico, moto acuatica',4);
-INSERT INTO turista VALUES (574, 80000.00, 'playa', 'ski acuatico, moto acuatica, visitas',2);
+INSERT INTO turista VALUES (266, 30000.00, 'playa', 'moto acuatica, ski acuatico, masajes',4);
+INSERT INTO turista VALUES (574, 80000.00, 'playa', 'moto acuatica, ski acuatico, visitas',2);
 INSERT INTO turista VALUES (398, 50000.00, 'selva', 'excursion',10);
 
 

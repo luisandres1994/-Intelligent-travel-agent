@@ -364,7 +364,7 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="name" type="java.lang.String" value="ski acuatica" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="ski acuatico" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="moto_acuatica">
@@ -372,7 +372,7 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="name" type="java.lang.String" value="monto acuatica" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="moto acuatica" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="excursion">
