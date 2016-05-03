@@ -125,7 +125,6 @@ public class proveedor  extends Agent {
                     query+=(String)args[0]+"."+select[i]+"='"+where[i]+"'";
                     try { //verificacion de condiciones una por una
                         stmt = con.createStatement();
-                        System.out.println(query);
                         rset= stmt.executeQuery(query);
                         if(!rset.next())encontro =false; //no puede dar disponibilidad
                         stmt.close();

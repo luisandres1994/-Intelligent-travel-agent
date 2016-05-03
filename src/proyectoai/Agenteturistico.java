@@ -69,7 +69,16 @@ public class Agenteturistico extends Agent {
                     mensajeCFP.setProtocol(FIPANames.InteractionProtocol.FIPA_CONTRACT_NET);
                    if(Proveedor.equals("transporte"))
                     {
-                         mensajeCFP.setContent("destino tipo/"+Proveedor+"/" +donde+" "+Como);
+                        String tipo="";
+                        if(Como!=null) tipo="tipo";
+                        else Como="";
+                         mensajeCFP.setContent("destino "+tipo+"/"+Proveedor+"/" +donde+" "+Como);
+                    }else if(Proveedor.equals("alojamiento"))
+                    {
+                        String comid="";
+                        if(comida!=null) comid="comida";
+                        else comida="";
+                        mensajeCFP.setContent("destino tipo cant_perso "+comid+"/"+Proveedor+"/"+donde+" "+hospedaje+" "+cuantos+" "+comida);
                     }
                     //Indicamos el tiempo que esperaremos por las ofertas.
                     mensajeCFP.setReplyByDate(new Date(System.currentTimeMillis() + 15000));
