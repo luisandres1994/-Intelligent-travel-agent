@@ -32,7 +32,7 @@ import java.util.logging.Logger;
 public class proveedor  extends Agent {
     
     private  Object[] args;
-   private static Connection con;
+   private  Connection con;
    
    private static ResultSet rset;
     private static Statement stmt;
@@ -64,12 +64,7 @@ public class proveedor  extends Agent {
     }
     
     
-    private void loadDB() throws ClassNotFoundException, SQLException, IOException
-    {
-        //coneccion a la base de datos.
-        Class.forName("oracle.jdbc.driver.OracleDriver");
-        con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
-    }
+   
  
  
     //Calculamos un precio para el coche aleatoriamente (estará entre 8000 y 30000).
@@ -92,19 +87,32 @@ public class proveedor  extends Agent {
                 boolean encontro=true;
                 query="";
                 //levantamos la base de datos ORACLE
-                 try {
-                        loadDB();
-                    } catch (ClassNotFoundException ex) {
-                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (SQLException ex) {
-                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (IOException ex) {
-                        Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
+                
+                 try{   
+                    Class.forName("oracle.jdbc.driver.OracleDriver");
+                    con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
+                    Statement st = con.createStatement();
+                    ResultSet rs = st.executeQuery("SELECT * FROM transporte");
+                    System.out.println("Conexión establecida.");
+                    while(rs.next()){
+                        System.out.println(rs.getString(1)+" "+rs.getString(2));
                     }
+                    st.close();
+                }catch(SQLException slex){
+                    System.out.print(slex);
+                }catch(ClassNotFoundException clex){
+                    System.out.print(clex);
+                }
+                
+                
+               // Class.forName("oracle.jdbc.driver.OracleDriver");
+              //  con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
                  
+                
+                
                 //construye la consulta que se realizara sobre la base de datos
                  //segun las preferencias recibidas por el agente turistico
-                String[] consulta=cfp.getContent().split("/");
+               /* String[] consulta=cfp.getContent().split("/");
                 String[] select=consulta[0].split(" ");
                 String[] from=consulta[1].split(" ");
                 String[] where=consulta[2].split(" ");
@@ -125,13 +133,13 @@ public class proveedor  extends Agent {
                     }*/
                     
                     //if(!rset.next())encontro =false;
-                    query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
+               /*     query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
                     
                 }
                 query+=(String)args[0]+"."+select[i]+"="+where[i]+"; ";
                 
+               */
                
-                
         
                 if(encontro)
                 {
