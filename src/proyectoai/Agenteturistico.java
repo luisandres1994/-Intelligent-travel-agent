@@ -1,4 +1,3 @@
-
 package proyectoai;
 
 import jade.core.AID;
@@ -17,20 +16,19 @@ import java.util.Vector;
 public class Agenteturistico extends Agent {
  
     private int numeroDeOfertas;
-   
+ 
     //Precio máximo que se pagará por un coche.
-    
+    public int precionMaximo;
     preferencias I;
-    Ofertas O=new Ofertas();
     Object[] args;
     Vector propuestas=new Vector(3,1);
     String[] transporte,alojamiento,turista;
-    public String donde,como,comida,cuantos,hospedaje,actividades;
+    public String donde,Como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
        
        args = this.getArguments();
         I=new preferencias(this);
-        donde=como=comida=cuantos=hospedaje=actividades="";
+        donde=Como=comida=cuantos=hospedaje=actividades="";
         
  
     } // Fin del setup
@@ -47,7 +45,7 @@ public class Agenteturistico extends Agent {
         
         @Override
         public void action() {
-                
+                precionMaximo=23456;
 
             //Búsqueda del proveedor servicio  las páginas amarillas.
             ServiceDescription servicio = new ServiceDescription();
@@ -69,10 +67,9 @@ public class Agenteturistico extends Agent {
                     }
             //Protocolo que vamos a utilizar
                     mensajeCFP.setProtocol(FIPANames.InteractionProtocol.FIPA_CONTRACT_NET);
-                    
-                    if(Proveedor.equals("transporte"))
+                   if(Proveedor.equals("transporte"))
                     {
-                         mensajeCFP.setContent("destino tipo/ "+Proveedor+" / " +donde+" "+como);
+                         mensajeCFP.setContent("destino tipo/ "+Proveedor+" / " +donde+" "+Como);
                     }
                     //Indicamos el tiempo que esperaremos por las ofertas.
                     mensajeCFP.setReplyByDate(new Date(System.currentTimeMillis() + 15000));
@@ -99,9 +96,6 @@ public class Agenteturistico extends Agent {
         addBehaviour(new iniciarcontranet("transporte"));
         addBehaviour(new iniciarcontranet("alojamiento"));
         addBehaviour(new iniciarcontranet("turista"));
-        I.setVisible(false);
-        
-        O.setVisible(true);
     }
     private class ManejoOpciones extends ContractNetInitiator {
  

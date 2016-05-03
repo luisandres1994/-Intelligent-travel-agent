@@ -344,7 +344,7 @@ public class preferencias extends javax.swing.JFrame {
         // TODO add your handling code here:
         a.play();
         a.donde=getSelectedButtonText(grupo_donde);
-        a.como=getSelectedButtonText(grupo_como);
+        a.Como=getSelectedButtonText(grupo_como);
         a.hospedaje=getSelectedButtonText(grupo_hospedaje);
         int n=-1;
         //Comida
