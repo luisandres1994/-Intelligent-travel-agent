@@ -17,9 +17,9 @@ import java.util.Vector;
 public class Agenteturistico extends Agent {
  
     private int numeroDeOfertas;
- 
+   
     //Precio máximo que se pagará por un coche.
-    public int precionMaximo;
+    
     preferencias I;
     Ofertas O=new Ofertas();
     Object[] args;
@@ -47,7 +47,7 @@ public class Agenteturistico extends Agent {
         
         @Override
         public void action() {
-                precionMaximo=23456;
+                
 
             //Búsqueda del proveedor servicio  las páginas amarillas.
             ServiceDescription servicio = new ServiceDescription();
@@ -69,8 +69,11 @@ public class Agenteturistico extends Agent {
                     }
             //Protocolo que vamos a utilizar
                     mensajeCFP.setProtocol(FIPANames.InteractionProtocol.FIPA_CONTRACT_NET);
-                    mensajeCFP.setContent("destino tipo/ "+Proveedor+" /campo carro");
- 
+                    
+                    if(Proveedor.equals("transporte"))
+                    {
+                         mensajeCFP.setContent("destino tipo/ "+Proveedor+" / " +donde+" "+como);
+                    }
                     //Indicamos el tiempo que esperaremos por las ofertas.
                     mensajeCFP.setReplyByDate(new Date(System.currentTimeMillis() + 15000));
  
