@@ -41,7 +41,8 @@ public class proveedor  extends Agent {
     String aux;
     protected void setup() {
           args = this.getArguments();
-      
+          
+           // this.getAID().setLocalName((String) args[0]);
             ServiceDescription servicio = new ServiceDescription();
              servicio.setType((String) args[0]);
             servicio.setName("Venta de "+(String) args[0]);
@@ -152,6 +153,7 @@ public class proveedor  extends Agent {
                      oferta.setContent(String.valueOf(proveedor.this.obtenerPrecio()));
                     } catch (SQLException ex) {
                         Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);}
+                    oferta.setOntology((String)args[0]);
                 return oferta;
                 }else
                 {

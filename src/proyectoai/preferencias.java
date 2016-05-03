@@ -356,7 +356,19 @@ public class preferencias extends javax.swing.JFrame {
         return null;
     }
     
-    
+    public String getmaxprecio(String proveedor)
+    {
+        if(proveedor.equals("transporte"))
+        {
+        return precio_act1.getText();
+        }
+        else if(proveedor.equals("turista"))
+        {
+        return precio_act.getText();
+        }
+        else
+            return precio_hospedaje.getText();
+    }
   
     
     

@@ -133,8 +133,7 @@ public class Agenteturistico extends Agent {
             
             
             //Escogemos la mejor oferta
-            int mejorOferta = Integer.MAX_VALUE;
-            AID mejorAutos = null;
+           
             ACLMessage aceptado = null;
             for (Object resp:respuestas) {
                 ACLMessage mensaje = (ACLMessage) resp;
@@ -143,12 +142,10 @@ public class Agenteturistico extends Agent {
                     respuesta.setPerformative(ACLMessage.REJECT_PROPOSAL);
                     aceptados.add(respuesta);
  
-                    //Si la oferta es la mejor (inferior a todas las otras)
-                    //Se almacena su precio y el AID de la venta de autos que la hizo.
+                    //Si la oferta es adecuada al precio tope establecido
+                    //se acepta la propuesta
                     int oferta = Integer.parseInt(mensaje.getContent());
-                    if (oferta <= precionMaximo && oferta <= mejorOferta) {
-                        mejorOferta = oferta;
-                        mejorAutos = mensaje.getSender();
+                    if (oferta <= Integer.parseInt(I.getmaxprecio(mensaje.getOntology()))) {
                         aceptado = respuesta;
                     }
                 }
