@@ -368,6 +368,7 @@ public class preferencias extends javax.swing.JFrame {
         }
         //Cantidad de personas
         String cant_per=getSelectedButtonText(grupo_personas);
+        a.cuantos=cant_per;
         if(cant_per==null){
             int amigos=(Integer) grupo.getValue();
             int familiares=(Integer) familia.getValue();

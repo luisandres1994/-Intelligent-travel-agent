@@ -24,6 +24,7 @@ public class Agenteturistico extends Agent {
     Vector propuestas=new Vector(3,1);
     String[] transporte,alojamiento,turista;
     public String donde,Como,comida,cuantos,hospedaje,actividades;
+    boolean don,com,comid,cuant,hospe,acti;
     protected void setup() {
        
        args = this.getArguments();
