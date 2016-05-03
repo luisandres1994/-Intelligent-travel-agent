@@ -100,56 +100,85 @@ public class preferencias extends javax.swing.JFrame {
         setResizable(false);
 
         montaña.setBackground(new java.awt.Color(255, 255, 255));
+        montaña.setName("montaña"); // NOI18N
 
         playa.setBackground(new java.awt.Color(255, 255, 255));
+        playa.setName("playa"); // NOI18N
 
         campo.setBackground(new java.awt.Color(255, 255, 255));
+        campo.setName("campo"); // NOI18N
 
         ciudad.setBackground(new java.awt.Color(255, 255, 255));
+        ciudad.setName("ciudad"); // NOI18N
 
         selva.setBackground(new java.awt.Color(255, 255, 255));
+        selva.setName("selva"); // NOI18N
 
         tren.setBackground(new java.awt.Color(255, 255, 255));
+        tren.setName("tren"); // NOI18N
 
         carro.setBackground(new java.awt.Color(255, 255, 255));
+        carro.setName("carro"); // NOI18N
 
         avion.setBackground(new java.awt.Color(255, 255, 255));
+        avion.setName("avion"); // NOI18N
 
         criolla.setBackground(new java.awt.Color(255, 255, 255));
+        criolla.setName("criolla"); // NOI18N
 
         vegetariana.setBackground(new java.awt.Color(255, 255, 255));
+        vegetariana.setName("vegetariana"); // NOI18N
 
         gourmet.setBackground(new java.awt.Color(255, 255, 255));
+        gourmet.setName("gourmet"); // NOI18N
 
         pareja.setBackground(new java.awt.Color(255, 255, 255));
+        pareja.setName("2"); // NOI18N
 
         solo.setBackground(new java.awt.Color(255, 255, 255));
+        solo.setName("1"); // NOI18N
 
         posada.setBackground(new java.awt.Color(255, 255, 255));
+        posada.setName("posada"); // NOI18N
 
         hotel.setBackground(new java.awt.Color(255, 255, 255));
+        hotel.setName("hotel"); // NOI18N
 
         escalada.setBackground(new java.awt.Color(255, 255, 255));
+        escalada.setName("escalada"); // NOI18N
 
         yoga.setBackground(new java.awt.Color(255, 255, 255));
+        yoga.setName("yoga"); // NOI18N
 
         masajes.setBackground(new java.awt.Color(255, 255, 255));
+        masajes.setName("masajes"); // NOI18N
 
         ski_acuatico.setBackground(new java.awt.Color(255, 255, 255));
+        ski_acuatico.setName("ski acuatica"); // NOI18N
 
         moto_acuatica.setBackground(new java.awt.Color(255, 255, 255));
+        moto_acuatica.setName("monto acuatica"); // NOI18N
 
         excursion.setBackground(new java.awt.Color(255, 255, 255));
+        excursion.setName("excursion"); // NOI18N
 
         bici_patines.setBackground(new java.awt.Color(255, 255, 255));
+        bici_patines.setName("bici o patinaje"); // NOI18N
 
         visitas.setBackground(new java.awt.Color(255, 255, 255));
+        visitas.setName("visitas"); // NOI18N
 
         jLabel1.setText("Precio máx. hospedaje");
 
+        precio_hospedaje.setName("preciohospedaje"); // NOI18N
+
         jLabel2.setText("Precio máx. actividades");
 
+        precio_act.setName("precioact"); // NOI18N
+
         jLabel3.setText("Precio máx. trasnporte");
+
+        precio_act1.setName("preciotransporte"); // NOI18N
 
         Play.setText("Buscar Ofertas");
         Play.addActionListener(new java.awt.event.ActionListener() {
