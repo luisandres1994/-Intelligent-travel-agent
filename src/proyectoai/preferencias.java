@@ -346,7 +346,7 @@ public class preferencias extends javax.swing.JFrame {
         a.donde=getSelectedButtonText(grupo_donde);
         a.como=getSelectedButtonText(grupo_como);
         a.hospedaje=getSelectedButtonText(grupo_hospedaje);
-        int n=0;
+        int n=-1;
         //Comida
         if(vegetariana.isSelected()){
             a.comida=vegetariana.getName();
@@ -378,7 +378,7 @@ public class preferencias extends javax.swing.JFrame {
             a.cuantos=cant_per;
         }
         //Actividades
-        n=0;
+        n=-1;
         if(excursion.isSelected()){
             a.actividades=excursion.getName();
             n++;
