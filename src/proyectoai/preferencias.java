@@ -432,7 +432,6 @@ public class preferencias extends javax.swing.JFrame {
                 a.actividades+=", "+bici_patines.getName();
             n++;
         }
-        System.out.println(a.actividades);
 
     }//GEN-LAST:event_PlayActionPerformed
 
