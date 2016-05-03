@@ -127,10 +127,10 @@ public class proveedor  extends Agent {
                     }*/
                     
                     //if(!rset.next())encontro =false;
-                    query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
+                    query+=(String)args[0]+"."+select[i]+"='"+where[i]+"', ";
                     
                 }
-                query+=(String)args[0]+"."+select[i]+"="+where[i]+" ";
+                query+=(String)args[0]+"."+select[i]+"='"+where[i]+"' ";
                 
                System.out.println(query);
                
