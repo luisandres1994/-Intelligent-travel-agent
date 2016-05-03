@@ -1,1 +1,1 @@
-http://Usuario-PC:7778/acc
+http://Sur-12:7778/acc
