@@ -91,13 +91,7 @@ public class proveedor  extends Agent {
                  try{   
                     Class.forName("oracle.jdbc.driver.OracleDriver");
                     con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE", "AGENTE", "123456");
-                    Statement st = con.createStatement();
-                    ResultSet rs = st.executeQuery("SELECT * FROM transporte");
-                    System.out.println("Conexión establecida.");
-                    while(rs.next()){
-                        System.out.println(rs.getString(1)+" "+rs.getString(2));
-                    }
-                    st.close();
+                   
                 }catch(SQLException slex){
                     System.out.print(slex);
                 }catch(ClassNotFoundException clex){
@@ -112,7 +106,7 @@ public class proveedor  extends Agent {
                 
                 //construye la consulta que se realizara sobre la base de datos
                  //segun las preferencias recibidas por el agente turistico
-               /* String[] consulta=cfp.getContent().split("/");
+                String[] consulta=cfp.getContent().split("/");
                 String[] select=consulta[0].split(" ");
                 String[] from=consulta[1].split(" ");
                 String[] where=consulta[2].split(" ");
@@ -133,12 +127,12 @@ public class proveedor  extends Agent {
                     }*/
                     
                     //if(!rset.next())encontro =false;
-               /*     query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
+                    query+=(String)args[0]+"."+select[i]+"="+where[i]+", ";
                     
                 }
-                query+=(String)args[0]+"."+select[i]+"="+where[i]+"; ";
+                query+=(String)args[0]+"."+select[i]+"="+where[i]+" ";
                 
-               */
+               System.out.println(query);
                
         
                 if(encontro)
