@@ -104,7 +104,7 @@ public class preferencias extends javax.swing.JFrame {
         setResizable(false);
 
         montaña.setBackground(new java.awt.Color(255, 255, 255));
-        montaña.setName("montaña"); // NOI18N
+        montaña.setName("montana"); // NOI18N
 
         playa.setBackground(new java.awt.Color(255, 255, 255));
         playa.setName("playa"); // NOI18N

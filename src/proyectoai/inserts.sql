@@ -17,8 +17,8 @@ INSERT INTO alojamiento VALUES (123, 'hotel', 5000.00, 'playa', 'Margarita', 'Ho
 INSERT INTO alojamiento VALUES (456, 'hotel', 15000.00, 'playa','Margarita',  'Hotel Embajador', 4, 'criolla');
 INSERT INTO alojamiento VALUES (231, 'posada', 10000.00, 'playa','Los Roques', 'Posada galapagos', 2, 'vegetariana, gourmet, criolla' );
 INSERT INTO alojamiento VALUES (345, 'posada', 8000.00, 'playa', 'La Tortuga', 'Bella Vista', 3, 'vegetariana');
-INSERT INTO alojamiento VALUES (657, 'hotel', 20000.00, 'montaña', 'Merida', 'Hotel Frailejon', 5, 'vegetariana, gourmet, criolla' );
-INSERT INTO alojamiento VALUES (891, 'posada', 7000.00, 'montaña','Roraima', 'Neblina', 2, 'criolla');
+INSERT INTO alojamiento VALUES (657, 'hotel', 20000.00, 'montana', 'Merida', 'Hotel Frailejon', 5, 'vegetariana, gourmet, criolla' );
+INSERT INTO alojamiento VALUES (891, 'posada', 7000.00, 'montana','Roraima', 'Neblina', 2, 'criolla');
 INSERT INTO alojamiento VALUES (144, 'posada', 30000.00, 'selva', 'Amazona','Anaconda',6 , 'vegetariana, gourmet, criolla');
 INSERT INTO alojamiento VALUES (253, 'hotel', 50000.00, 'ciudad','Paris', 'Hotel Moulin Rouge', 1, 'vegetariana, gourmet, criolla' );
 INSERT INTO alojamiento VALUES (182, 'posada', 30000.00, 'campo', 'Mexico', 'Campo Turistico Villas de Cortez', 2, 'gourmet');
