@@ -23,6 +23,7 @@ public class Agenteturistico extends Agent {
     preferencias I;
     Object[] args;
     Vector propuestas=new Vector(3,1);
+    String[] transporte,alojamiento,turista;
     public String donde,Como,comida,cuantos,hospedaje,actividades;
     protected void setup() {
        
@@ -102,7 +103,9 @@ public class Agenteturistico extends Agent {
         }
  
         
-        
+        protected void handleRefuse(ACLMessage rechazo) {
+            
+        }
  
         //Manejador de respuestas de fallo.
         protected void handleFailure(ACLMessage fallo) {
@@ -157,7 +160,9 @@ public class Agenteturistico extends Agent {
             }
         }
  
-        
+        protected void handleInform(ACLMessage inform) {
+            
+        }
     }
     }
 
