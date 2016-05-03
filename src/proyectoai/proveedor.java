@@ -105,8 +105,9 @@ public class proveedor  extends Agent {
                 
                 //construye la consulta que se realizara sobre la base de datos
                  //segun las preferencias recibidas por el agente turistico
-                 System.out.println(cfp.getContent());
+                
                 String[] consulta=cfp.getContent().split("/");
+                
                 String[] select=consulta[0].split(" ");
                 String[] from=consulta[1].split(" ");
                 String[] where=consulta[2].split(" ");
@@ -115,7 +116,8 @@ public class proveedor  extends Agent {
                //se agregan las condiciones a la consulta y se verifican una por una, de no cumplirse una el agente
                 //rechaza el cfp porque no hay disponibilidad con las condiciones dadas
                 aux="";
-                query="select * from "+from[0]+" where ";
+                query="select * from "+(String) args[0]+" where ";
+                
                 int i;
                 for(i=0; i<where.length-1; i++)
                 {
@@ -123,6 +125,7 @@ public class proveedor  extends Agent {
                     query+=(String)args[0]+"."+select[i]+"='"+where[i]+"'";
                     try { //verificacion de condiciones una por una
                         stmt = con.createStatement();
+                        System.out.println(query);
                         rset= stmt.executeQuery(query);
                         if(!rset.next())encontro =false; //no puede dar disponibilidad
                         stmt.close();
