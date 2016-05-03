@@ -38,6 +38,7 @@ public class proveedor  extends Agent {
     private static Statement stmt;
     
     String query;
+    String aux;
     protected void setup() {
           args = this.getArguments();
       
@@ -67,13 +68,12 @@ public class proveedor  extends Agent {
    
  
  
-    //damos el paquete con el precio mas barato
+    //mandamos solo  el paquete con el precio mas barato
     private int obtenerPrecio() throws SQLException {
         try {
                         stmt = con.createStatement();
-                        String Query="select min("+(String)args[0]+".precio) as minimo from "+(String)args[0];
-                        System.out.println(Query);
-                        rset= stmt.executeQuery("select sum("+(String)args[0]+".precio) as suma from "+(String)args[0]);
+                        String Query="select min("+(String)args[0]+".precio) as minimo from "+(String)args[0]+" where "+aux;
+                        rset= stmt.executeQuery(Query);
                         
                     } catch (SQLException ex) {
                         Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
@@ -122,21 +122,25 @@ public class proveedor  extends Agent {
                     query=query+(String)args[0]+"."+select[i]+", ";
                 query+=(String)args[0]+".precio from "+(String)args[0]+" where ";
                 
-               //se agregan las condiciones a la consulta y se verifican una por una, se no cumplirse una el agente
-                //rechaza el cfp porque no hay ofertas disponibles con las condiciones dadas
+               //se agregan las condiciones a la consulta y se verifican una por una, de no cumplirse una el agente
+                //rechaza el cfp porque no hay disponibilidad con las condiciones dadas
+                aux="";
                 for(i=0; i<where.length-1; i++)
                 {
+                    aux+=(String)args[0]+"."+select[i]+"='"+where[i]+"'";
                     query+=(String)args[0]+"."+select[i]+"='"+where[i]+"'";
                     try { //verificacion de condiciones una por una
                         stmt = con.createStatement();
                         rset= stmt.executeQuery(query);
-                        if(!rset.next())encontro =false; //no puede dar oferta
+                        if(!rset.next())encontro =false; //no puede dar disponibilidad
                         stmt.close();
                     } catch (SQLException ex) {
                         Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    query+=" and ";            
+                    aux+=" and ";
+                    query+=" and ";          
                 }
+                aux+=(String)args[0]+"."+select[i]+"='"+where[i]+"' ";
                 query+=(String)args[0]+"."+select[i]+"='"+where[i]+"' ";
                try {
                         stmt = con.createStatement();
@@ -146,7 +150,9 @@ public class proveedor  extends Agent {
                     } catch (SQLException ex) {
                         Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
                     }
-        
+                
+               
+               //si encontro disponibilidad
                 if(encontro)
                 {
                 ACLMessage oferta = cfp.createReply();
@@ -168,15 +174,26 @@ public class proveedor  extends Agent {
             //Hemos recibido una aceptación de nuestra oferta, enviamos los resultados
             
                 String res="";
+                int i;
             if (devolveroferta()) {
                 
-                /*try {
+                try {
+                    //armamos ya la consulta general con las condiciones dadas
+                    //se envia los resultados de cada fila de la consulta separadas por /
                     stmt = con.createStatement();
-                    rset= stmt.executeQuery(query);
-                while(rset.next()) res+=rset.toString()+"/ ";
+                    rset= stmt.executeQuery("select * from "+(String)args[0]+" where "+aux);
+                    while(rset.next()) 
+                    {
+                         for(i=1; i<=rset.getMetaData().getColumnCount(); i++)
+                         {
+                             res+=rset.getString(i)+" ";
+
+                         }
+                        res+="/ ";
+                    }
                 } catch (SQLException ex) {
                     Logger.getLogger(proveedor.class.getName()).log(Level.SEVERE, null, ex);
-                }*/
+                }
      
  
                 ACLMessage inform = accept.createReply();
