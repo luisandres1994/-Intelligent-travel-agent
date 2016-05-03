@@ -4,6 +4,8 @@
  */
 package proyectoai;
 
+import java.util.Enumeration;
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -101,6 +103,11 @@ public class preferencias extends javax.swing.JFrame {
 
         montaña.setBackground(new java.awt.Color(255, 255, 255));
         montaña.setName("montaña"); // NOI18N
+        montaña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                montañaActionPerformed(evt);
+            }
+        });
 
         playa.setBackground(new java.awt.Color(255, 255, 255));
         playa.setName("playa"); // NOI18N
@@ -341,6 +348,21 @@ public class preferencias extends javax.swing.JFrame {
         a.play();
     }//GEN-LAST:event_PlayActionPerformed
 
+    private void montañaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_montañaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_montañaActionPerformed
+
+    public String getSelectedButtonText(ButtonGroup buttonGroup) {
+        for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
+            AbstractButton button = buttons.nextElement();
+
+            if (button.isSelected()) {
+                return button.getText();
+            }
+        }
+
+        return null;
+    }
   
     
     
